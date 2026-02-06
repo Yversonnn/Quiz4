@@ -1,0 +1,339 @@
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  gap: 20px;
+}
+
+.dashboard-header .header-top {
+  flex: 1;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.dashboard-header p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  gap: 6px;
+}
+
+.btn-primary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1976d2;
+}
+
+.btn-secondary {
+  background-color: #757575;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #616161;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  border-left: 4px solid #c62828;
+}
+
+.no-projects {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.no-projects p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-small {
+  padding: 6px 12px !important;
+  font-size: 12px !important;
+}
+
+.btn-info {
+  background-color: #0288d1;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #0277bd;
+}
+
+/* Projects Table */
+.projects-table-container {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.projects-table thead {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.projects-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+}
+
+.projects-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.projects-table tbody tr:hover:not(.accordion-row) {
+  background-color: #f9f9f9;
+}
+
+.project-row {
+  cursor: pointer;
+}
+
+.project-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.expand-btn:hover {
+  color: #1976d2;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hours-cell {
+  text-align: center;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+/* Accordion Content */
+.accordion-row {
+  background-color: #fafafa;
+}
+
+.accordion-row td {
+  padding: 0 !important;
+  border-bottom: none;
+}
+
+.accordion-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.accordion-section h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+  border-left: 3px solid #1976d2;
+}
+
+.detail-item .label {
+  font-weight: 600;
+  color: #666;
+  min-width: 120px;
+}
+
+.detail-item .value {
+  color: #333;
+  flex: 1;
+}
+
+/* Tasks List */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-header h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.task-description {
+  margin: 8px 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.task-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.task-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.no-tasks {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .projects-table {
+    font-size: 12px;
+  }
+
+  .projects-table th,
+  .projects-table td {
+    padding: 12px 8px;
+  }
+
+  .task-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .accordion-content {
+    gap: 20px;
+  }
+}
