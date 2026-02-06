@@ -45,6 +45,7 @@ const ProjectDetail = () => {
       in_progress: 'In Progress',
       planning: 'Planning',
       overdue: 'Overdue',
+      on_hold: 'On Hold',
     };
     return labels[status] || status;
   };

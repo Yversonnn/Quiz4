@@ -179,15 +179,16 @@
 
 .status-badge {
   display: inline-block;
-  padding: 8px 14px;
+  padding: 12px 20px;
   border-radius: 4px;
-  font-size: 13px;
-  font-weight: 600;
-  background-color: #ffffff;
-  color: #000;
-  border: 1px solid #999;
-  min-height: 20px;
-  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000;
+  min-width: 120px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .hours-cell {
