@@ -26,7 +26,7 @@ const TaskCreate = () => {
     (state) => state.tasks
   );
 
-  // Check permission
+  
   const hasPermission = user && ['ADMIN', 'MANAGER'].includes(user.role);
 
   useEffect(() => {
@@ -34,14 +34,14 @@ const TaskCreate = () => {
       navigate('/');
       return;
     }
-    // Fetch available users based on current user's role
+  
     dispatch(fetchAvailableUsers(user.role));
   }, [user, dispatch, hasPermission, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error for this field
+   
     if (formErrors[name]) {
       setFormErrors((prev) => ({ ...prev, [name]: '' }));
     }

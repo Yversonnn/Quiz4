@@ -33,21 +33,12 @@ const Dashboard = () => {
     setExpandedProjectId(expandedProjectId === projectId ? null : projectId);
   };
 
-  const getStatusColor = (status) => {
-    const colors = {
-      completed: '#4caf50',
-      in_progress: '#2196f3',
-      planning: '#ff9800',
-      on_hold: '#f44336',
-    };
-    return colors[status] || '#666';
-  };
-
   const getStatusLabel = (status) => {
     const labels = {
       completed: 'Completed',
       in_progress: 'In Progress',
       planning: 'Planning',
+      overdue: 'Overdue',
       on_hold: 'On Hold',
     };
     return labels[status] || status;
@@ -80,16 +71,16 @@ const Dashboard = () => {
           {hasRole('ADMIN') && (
             <div className="admin-menu">
               <Link to="/users" className="btn btn-secondary">
-                👥 User Management
+                 User Management
               </Link>
               <Link to="/users/create" className="btn btn-secondary">
-                ➕ Create User
+                Create User
               </Link>
             </div>
           )}
           {hasRole('ADMIN') && (
             <Link to="/projects/create" className="btn btn-primary">
-              + Create Project
+              Create Project
             </Link>
           )}
         </div>
@@ -135,10 +126,7 @@ const Dashboard = () => {
                       <span>{project.project_name}</span>
                     </td>
                     <td>
-                      <span
-                        className="status-badge"
-                        style={{ backgroundColor: getStatusColor(project.status) }}
-                      >
+                      <span className="status-badge">
                         {getStatusLabel(project.status)}
                       </span>
                     </td>
@@ -189,12 +177,7 @@ const Dashboard = () => {
                                   <div key={task.id} className="task-item">
                                     <div className="task-header">
                                       <h4>{task.task_name}</h4>
-                                      <span
-                                        className="status-badge"
-                                        style={{
-                                          backgroundColor: getStatusColor(task.status),
-                                        }}
-                                      >
+                                      <span className="status-badge">
                                         {getStatusLabel(task.status)}
                                       </span>
                                     </div>
